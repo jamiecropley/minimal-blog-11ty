@@ -1,5 +1,3 @@
-# In Sublime Text do not run this as CTRL + B!
-
 npm run clean
 if ($?) {
     npx eleventy
