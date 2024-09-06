@@ -1,0 +1,18 @@
+{
+  "name": "minimal-blog-11ty",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rimraf _site",
+    "build": "npm run clean && eleventy",
+    "build:drafts": "BUILD_DRAFTS=true eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

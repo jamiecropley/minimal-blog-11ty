@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minimal Blog 11ty - Blog</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  {% include 'header.liquid' %}
+  <main>
+    <ul class="blog-posts">
+      {% for post in collections.blogPosts %}
+        <li>
+            <span>{{ post.date | date: "%d/%m/%Y" }}:</span> <a href="{{ post.url }}">{{ post.data.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </main>
+  {% include 'footer.liquid' %}
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} - Minimal Blog 11ty</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  {% include 'header.liquid' %}
+  <main>
+    <article>
+      <h2>{{ title }}</h2>
+      <time datetime="{{ date | date: '%Y-%m-%d' }}">{{ date | date: "%d/%m/%Y" }}</time>
+      {{ content }}
+    </article>
+  </main>
+  {% include 'footer.liquid' %}
+</body>
+</html>
