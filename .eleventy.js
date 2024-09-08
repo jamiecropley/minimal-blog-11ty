@@ -5,7 +5,7 @@ module.exports = function(eleventyConfig) {
   // Add a collection for blog posts, sorted by date (latest first)
   eleventyConfig.addCollection("blogPosts", function(collectionApi) {
     return collectionApi.getFilteredByGlob("_pages/blog/*.md")
-      .sort((a, b) => b.date - a.date);
+      .sort((a, b) => new Date(b.date) - new Date(a.date)); // Ensure date sorting
   });
 
   return {
